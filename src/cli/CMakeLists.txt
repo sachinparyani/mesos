@@ -15,10 +15,9 @@
 # limitations under the License.
 
 # TODO(josephw): Enable this on Windows after sorting out the dependencies.
-if (NOT WIN32)
-  # THE MESOS EXECUTE.
-  # Utility used to schedule and run a command in a mesos cluster.
-  ################################################################
-  add_executable(mesos-execute execute.cpp)
-  target_link_libraries(mesos-execute PRIVATE mesos)
-endif ()
+
+# THE MESOS EXECUTE.
+# Utility used to schedule and run a command in a mesos cluster.
+################################################################
+add_executable(mesos-execute execute.cpp)
+target_link_libraries(mesos-execute PRIVATE mesos)
